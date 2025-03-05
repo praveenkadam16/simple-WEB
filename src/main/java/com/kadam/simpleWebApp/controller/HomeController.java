@@ -1,6 +1,7 @@
 package com.kadam.simpleWebApp.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,5 +18,10 @@ public class HomeController {
 		public String about() {
 			return "We dont teach, we educate!!";
 		}
+		@GetMapping("/git")
+		public String git() {
+			return "Learning Git and Github";
+		}
+		
 		
 }
