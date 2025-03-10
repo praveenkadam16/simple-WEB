@@ -1,14 +1,18 @@
 package com.kadam.simpleWebApp.model;
 
+import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-
+@Component
+@Entity
 public class Product {
 	@Override
 	public String toString() {
 		return "Product [prodId=" + prodId + ", prodName=" + prodName + ", price=" + price + "]";
 	}
-
+	@Id
 	private int prodId;
 	private String prodName;
 	private int price;
@@ -42,6 +46,10 @@ public class Product {
 		this.prodId = prodId;
 		this.prodName = prodName;
 		this.price = price;
+	}
+
+	public Product() {
+		// TODO Auto-generated constructor stub
 	}
 
 }
